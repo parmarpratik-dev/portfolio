@@ -33,6 +33,7 @@ export default function Navbar() {
         {/* Desktop Links */}
         <div className="navbar-links">
           <a href="#about" className="nav-link">About</a>
+          <a href="#experience" className="nav-link">Experience</a>
           <a href="#skills" className="nav-link">Skills</a>
           <a href="#projects" className="nav-link">Projects</a>
           <a href="#contact" className="nav-link">Contact</a>
@@ -61,6 +62,7 @@ export default function Navbar() {
       <div className={`mobile-drawer ${isOpen ? 'open' : ''}`}>
         <div className="mobile-links">
           <a href="#about" className="mobile-nav-link" onClick={toggleMenu}>About</a>
+          <a href="#experience" className="mobile-nav-link" onClick={toggleMenu}>Experience</a>
           <a href="#skills" className="mobile-nav-link" onClick={toggleMenu}>Skills</a>
           <a href="#projects" className="mobile-nav-link" onClick={toggleMenu}>Projects</a>
           <a href="#contact" className="mobile-nav-link" onClick={toggleMenu}>Contact</a>
