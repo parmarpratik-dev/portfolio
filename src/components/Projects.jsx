@@ -1,6 +1,7 @@
 import React from 'react';
 import { ExternalLink, Code } from 'lucide-react';
 import { GithubIcon } from './Icons';
+import ProjectSlider from './ProjectSlider';
 import { portfolioData } from '../data/portfolioData';
 import './Projects.css';
 
@@ -15,12 +16,10 @@ export default function Projects() {
         <div className="projects-grid">
           {projects.map((project) => (
             <article key={project.id} className="project-card glass">
-              <div className="project-image-fallback">
-                <div className="fallback-glow"></div>
-                <Code className="project-fallback-icon" size={40} />
-                <span className="fallback-text">{project.imageText}</span>
+              <div className="project-media">
+                <ProjectSlider media={project.media} />
               </div>
-              
+
               <div className="project-info">
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-description">{project.description}</p>
@@ -32,24 +31,28 @@ export default function Projects() {
                 </div>
                 
                 <div className="project-links">
-                  <a 
-                    href={project.githubLink} 
-                    target="_blank" 
-                    rel="noreferrer" 
-                    className="project-link-btn"
-                    aria-label="GitHub Repository"
-                  >
-                    <GithubIcon size={18} /> Code
-                  </a>
-                  <a 
-                    href={project.liveLink} 
-                    target="_blank" 
-                    rel="noreferrer" 
-                    className="project-link-btn primary-link"
-                    aria-label="Live Demo"
-                  >
-                    <ExternalLink size={18} /> Demo
-                  </a>
+                  {project.githubLink && (
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project-link-btn"
+                      aria-label="GitHub Repository"
+                    >
+                      <GithubIcon size={18} /> Code
+                    </a>
+                  )}
+                  {project.liveLink && (
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project-link-btn primary-link"
+                      aria-label="Live Demo"
+                    >
+                      <ExternalLink size={18} /> Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </article>

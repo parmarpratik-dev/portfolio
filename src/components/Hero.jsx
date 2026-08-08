@@ -5,7 +5,7 @@ import './Hero.css';
 
 export default function Hero() {
   const { personalInfo } = portfolioData;
-  const words = ["Full-Stack Developer", "Software Engineer", "MERN Stack Specialist"];
+  const words = ["Software Developer", "Backend Developer"];
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [blink, setBlink] = useState(true);
@@ -76,15 +76,19 @@ export default function Hero() {
               </div>
               <pre className="code-content">
                 <code>
-{`const developer = {
-  name: "${personalInfo.name}",
-  skills: ["React", "Node", "Express", "Mongo"],
-  hardWorker: true,
-  problemSolver: true,
-  code: () => {
-    return "Beautiful Web Apps";
-  }
-};`}
+{`public class JavaDeveloper {
+    private String name = "${personalInfo.name}";
+    private String[] stack = {
+        "Java", "Spring Boot", 
+        "PostgreSQL", "React"
+    };
+    
+    public void buildBackend() {
+        System.out.println(
+            "Scaling robust APIs!"
+        );
+    }
+}`}
                 </code>
               </pre>
             </div>

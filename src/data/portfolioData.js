@@ -5,12 +5,12 @@ export const portfolioData = {
     name: "Pratik Parmar",
     title: "Java & Backend Developer",
     subtitle: "Transitioning 2.5+ years of professional development experience into robust backend engineering.",
-    bio: "I am an aspiring Java Developer with a strong foundation in e-commerce and Shopify customization. Currently expanding my core expertise to Java, Spring Boot, PostgreSQL, and React to build scale-ready backend architectures and seamless end-to-end applications.",
+    bio: "Hi! I'm Pratik Parmar, a software developer transitioning my professional career into Java backend development. With over 2.5 years of industry experience as a Shopify Developer, I have worked on building and customizing e-commerce solutions, integrating third-party services, and developing custom features. I am now focused on Java, Spring Boot, PostgreSQL, REST APIs, Spring Security, JWT authentication, WebSocket, and backend application development.",
     email: "parmarpratik1842000@gmail.com",
     phone: "+91 8780985991",
     location: "Surat, Gujarat, India",
-    github: "https://github.com", // Replace with your actual GitHub link when ready
-    linkedin: "https://linkedin.com", // Replace with your actual LinkedIn link when ready
+    github: "https://github.com/parmarpratik-dev/",
+    linkedin: "https://www.linkedin.com/in/parmarpratik-java/",
     resumeUrl: "#", // Link to your CV file (e.g., /resume.pdf in public folder)
     dob: "18/04/2000"
   },
@@ -23,7 +23,7 @@ export const portfolioData = {
     {
       category: "Backend & Databases (Current Focus)",
       items: [
-        { name: "Java SE/EE", level: 80 },
+        { name: "Java", level: 80 },
         { name: "Spring Boot & REST APIs", level: 75 },
         { name: "PostgreSQL", level: 78 },
         { name: "PHP (Live Project experience)", level: 70 }
@@ -32,14 +32,14 @@ export const portfolioData = {
     {
       category: "Frontend & Custom Scripting",
       items: [
-        { name: "JavaScript (ES6+)", level: 85 },
+        { name: "HTML5 & CSS", level: 92 },
+        { name: "tailwind css", level: 90 },
+        { name: "JavaScript", level: 85 },
         { name: "React.js", level: 60 }, // Mentioning (Learning) in bio/resume
-        { name: "Liquid (Shopify Engine)", level: 90 },
-        { name: "HTML5 & CSS3", level: 92 }
       ]
     },
     {
-      category: "E-Commerce & SEO Tools",
+      category: "E-Commerce & Tools",
       items: [
         { name: "Shopify CLI & Theme Kit", level: 90 },
         { name: "Google Tag Manager & GTM", level: 85 },
@@ -51,30 +51,42 @@ export const portfolioData = {
   projects: [
     {
       id: 1,
-      title: "E-Commerce REST API Backend",
-      description: "A scale-ready backend API built using Java, Spring Boot, and PostgreSQL. Integrates Spring Security, JWT authentication, and structured DB tables for managing products, shopping carts, and order processing.",
-      tags: ["Java", "Spring Boot", "PostgreSQL", "Hibernate", "Spring Security"],
-      liveLink: "#",
+      title: "AI Email Auto-Reply Generator",
+      description: "AI-powered email assistant built with Spring Boot, React, and PostgreSQL, using the Google Gemini AI model to analyze email content and generate relevant, context-aware replies. Users can review and edit AI-generated responses before sending them directly from the application.",
+      tags: ["Java", "Spring Boot", "React", "PostgreSQL", "AI", "Gemini"],
+      media: [
+        { type: "video", src: "/email-generator.mp4" },
+      ],
       githubLink: "#",
-      imageText: "API"
+      imageText: "EMAIL"
     },
     {
       id: 2,
-      title: "Custom Shopify CRM Integration Portal",
-      description: "Developed custom middleware connecting Shopify stores with external inventory tools. Uses webhooks, background queues, and API synchronization to keep catalog listings synced in real-time.",
-      tags: ["JavaScript", "Node.js", "PHP", "Shopify API", "Webhooks"],
-      liveLink: "#",
-      githubLink: "#",
-      imageText: "CRM"
+      title: "Real-Time Chat App with Spring Boot & React",
+      description: "A full-stack real-time chat application built with Spring Boot, React, PostgreSQL, and WebSocket. Includes user search, friend requests, accept/reject functionality, real-time messaging, message deletion.",
+      tags: ["Java", "Spring Boot", "React", "PostgreSQL", "WebSocket", "Real-time"],
+      media: [
+        { type: "video", src: "/chatapp.mp4" },
+      ],
+      githubLink: "https://github.com/parmarpratik-dev/spring-project"
     },
     {
       id: 3,
-      title: "React Dashboard for Store Analytics",
-      description: "A single-page analytics application pulling site performance scores, SEO indexes, and traffic counts from search consoles. Built with modular cards and interactive chart displays.",
-      tags: ["React.js", "CSS variables", "Google API", "Responsive CSS"],
-      liveLink: "#",
-      githubLink: "#",
-      imageText: "ANL"
+      title: "OAuth(google login) & JWT Authentication System",
+      description: "Full-stack application built with React and Spring Boot featuring Google OAuth 2.0 and JWT-based authentication, forgot-password functionality, and an admin dashboard with user search, pagination, and inline field editing. Also includes a weather application with real-time weather data and NASA API integration to fetch the latest available Earth imagery.",
+      tags: [
+        "React.js",
+        "Spring Boot · Java",
+        "Google Login",
+        "Spring Security · JWT",
+        "NASA API",
+        "Weather API"
+      ],
+      media: [
+        { type: "video", src: "/backend-project.mp4" },
+        { type: "video", src: "/admin-portal.mp4" }
+      ],
+      githubLink: "https://github.com/parmarpratik-dev/chatapp"
     }
   ],
   experience: [
@@ -136,8 +148,8 @@ export const portfolioData = {
     }
   ],
   aboutMe: {
-    paragraph1: "Hi! I'm Pratik Parmar, a software developer transitioning my professional career into Java backend engineering. With over 2.5 years of industry experience building, maintaining, and scaling e-commerce systems, I bring a unique combination of frontend responsiveness, search optimization skills, and backend architecture curiosity.",
-    paragraph2: "In my previous roles as a Shopify Developer, I spearheaded store builds, custom plugin integrations, and analytics tracking. Now, I am redirecting my drive for custom feature creation to Java, Spring Boot, and PostgreSQL. I enjoy designing RESTful microservices, query schemas, and security pipelines.",
-    paragraph3: "I am a continuous learner, currently pursuing my BCA online at Parul University. Outside of writing code, you can find me playing volleyball (I was a district-level champion!) or researching new tech stacks. I am eager to join a technical team where I can apply my experience and build powerful backend systems."
+    paragraph1: "Hi! I'm Pratik Parmar, a software developer transitioning my professional career into Java backend development. With over 2.5 years of industry experience as a Shopify Developer, I have worked on building and customizing e-commerce solutions, integrating third-party services, and developing custom features. I am now focused on Java, Spring Boot, PostgreSQL, REST APIs, Spring Security, JWT authentication, WebSocket, and backend application development.",
+    paragraph2: "I have built full-stack projects including real-time chat applications, admin dashboards, authentication systems with Google OAuth and JWT, and AI-powered applications using the Google Gemini AI model, along with integrations such as NASA and Weather APIs. I am continuously improving my backend development skills and looking for an opportunity to join a technical team where I can apply my experience, build scalable applications, and grow as a Java backend developer.",
+    paragraph3: "I am a continuous learner, currently pursuing my BCA online at Parul University. Outside of writing code, you can find me playing volleyball (I was a district-level champion!) or researching new tech stacks. I am eager to join a technical team where I can apply my experience, build powerful backend systems, and contribute to innovative solutions."
   }
 };
