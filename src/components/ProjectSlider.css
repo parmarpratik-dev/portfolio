@@ -38,6 +38,43 @@
   z-index: 2;
 }
 
+/* Custom play/pause overlay to replace native controls (no volume UI) */
+.video-overlay-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 12;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.5);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+  backdrop-filter: blur(6px);
+}
+
+.video-overlay-btn:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  background: rgba(0,0,0,0.65);
+}
+
+.video-overlay-btn:active {
+  transform: translate(-50%, -50%) scale(0.98);
+}
+
+/* Ensure native controls are not visible on mobile/desktop */
+video::-webkit-media-controls-volume-slider,
+video::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
 /* Navigation Buttons */
 .slider-btn {
   position: absolute;

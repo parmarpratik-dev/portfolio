@@ -137,28 +137,3 @@
     padding: 1.25rem;
   }
 }
-}
-
-.project-link-btn:hover {
-  color: var(--text-primary);
-  border-color: var(--text-secondary);
-}
-
-.project-link-btn.primary-link {
-  color: #000;
-  background: var(--primary);
-  border-color: var(--primary);
-}
-
-.project-link-btn.primary-link:hover {
-  background: transparent;
-  color: var(--primary);
-  box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
-}
-
-/* Responsive */
-@media (max-width: 480px) {
-  .project-info {
-    padding: 1.25rem;
-  }
-}

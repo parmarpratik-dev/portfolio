@@ -4,14 +4,14 @@ export const portfolioData = {
   personalInfo: {
     name: "Pratik Parmar",
     title: "Java & Backend Developer",
-    subtitle: "Transitioning 2.5+ years of professional development experience into robust backend engineering.",
-    bio: "Hi! I'm Pratik Parmar, a software developer transitioning my professional career into Java backend development. With over 2.5 years of industry experience as a Shopify Developer, I have worked on building and customizing e-commerce solutions, integrating third-party services, and developing custom features. I am now focused on Java, Spring Boot, PostgreSQL, REST APIs, Spring Security, JWT authentication, WebSocket, and backend application development.",
+    subtitle: "Transitioning from Shopify development to Java backend engineering with 2.5+ years of professional development experience.",
+    bio: "Hi! I'm Pratik Parmar, a software developer transitioning my professional career into Java backend development. With over 2.5 years of industry experience as a Shopify Developer, I have worked on building and customizing e-commerce solutions, integrating third-party services, and developing custom features. I am now focused on Java, Spring Boot, PostgreSQL, Hibernate/JPA, REST APIs, OOP, JWT authentication, WebSocket, and backend application development. I have built full-stack projects including real-time chat applications, admin dashboards, authentication systems with Google OAuth and JWT, and an AI-powered email auto-reply generator inside Gmail using the Google Gemini AI model, along with integrations such as NASA and Weather APIs. I am continuously improving my backend development skills and looking for an opportunity to join a technical team where I can apply my experience, build scalable applications, and grow as a Java backend developer.",
     email: "parmarpratik1842000@gmail.com",
     phone: "+91 8780985991",
     location: "Surat, Gujarat, India",
     github: "https://github.com/parmarpratik-dev/",
     linkedin: "https://www.linkedin.com/in/parmarpratik-java/",
-    resumeUrl: "#", // Link to your CV file (e.g., /resume.pdf in public folder)
+    resumeUrl: "/Pratik_Parmar_CV.pdf",
     dob: "18/04/2000"
   },
   stats: [
@@ -148,8 +148,8 @@ export const portfolioData = {
     }
   ],
   aboutMe: {
-    paragraph1: "Hi! I'm Pratik Parmar, a software developer transitioning my professional career into Java backend development. With over 2.5 years of industry experience as a Shopify Developer, I have worked on building and customizing e-commerce solutions, integrating third-party services, and developing custom features. I am now focused on Java, Spring Boot, PostgreSQL, REST APIs, Spring Security, JWT authentication, WebSocket, and backend application development.",
-    paragraph2: "I have built full-stack projects including real-time chat applications, admin dashboards, authentication systems with Google OAuth and JWT, and AI-powered applications using the Google Gemini AI model, along with integrations such as NASA and Weather APIs. I am continuously improving my backend development skills and looking for an opportunity to join a technical team where I can apply my experience, build scalable applications, and grow as a Java backend developer.",
-    paragraph3: "I am a continuous learner, currently pursuing my BCA online at Parul University. Outside of writing code, you can find me playing volleyball (I was a district-level champion!) or researching new tech stacks. I am eager to join a technical team where I can apply my experience, build powerful backend systems, and contribute to innovative solutions."
+    paragraph1: "Transitioning from Shopify development to Java backend engineering with 2.5+ years of professional development experience. Hi! I'm Pratik Parmar, a software developer transitioning my professional career into Java backend development. With over 2.5 years of industry experience as a Shopify Developer, I have worked on building and customizing e-commerce solutions, integrating third-party services, and developing custom features. I am now focused on Java, Spring Boot, PostgreSQL, REST APIs, Spring Security, JWT authentication, WebSocket, and backend application development. I have built full-stack projects including real-time chat applications, admin dashboards, authentication systems with Google OAuth and JWT, and AI-powered applications using the Google Gemini AI model, along with integrations such as NASA and Weather APIs. I am continuously improving my backend development skills and looking for an opportunity to join a technical team where I can apply my experience, build scalable applications, and grow as a Java backend developer.",
+    paragraph2: "I am a continuous learner, currently pursuing my BCA online at Parul University. Outside of writing code, you can find me playing volleyball (I was a district-level champion!) or researching new tech stacks. I am eager to join a technical team where I can apply my experience, build powerful backend systems, and contribute to innovative solutions.",
+    paragraph3: ""
   }
 };

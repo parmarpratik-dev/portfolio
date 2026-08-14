@@ -5,11 +5,22 @@ import './Hero.css';
 
 export default function Hero() {
   const { personalInfo } = portfolioData;
+  const basePath = import.meta.env.BASE_URL;
+  const cvPath = basePath + 'Pratik_Parmar_CV.pdf';
   const words = ["Software Developer", "Backend Developer"];
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [blink, setBlink] = useState(true);
   const [reverse, setReverse] = useState(false);
+
+  const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = cvPath;
+    link.download = 'Parmar_pratik_cv_main.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   // Typing effect
   useEffect(() => {
@@ -57,9 +68,9 @@ export default function Hero() {
             <a href="#projects" className="btn btn-primary">
               View My Work <ArrowDown size={18} />
             </a>
-            <a href={personalInfo.resumeUrl} className="btn btn-secondary" download>
+            <button onClick={handleDownloadCV} className="btn btn-secondary">
               Download CV <FileText size={18} />
-            </a>
+            </button>
           </div>
         </div>
         
