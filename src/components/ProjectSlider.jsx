@@ -22,6 +22,8 @@ export default function ProjectSlider({ media }) {
   const mediaPath = basePath + currentMedia.src.replace(/^\//, '');
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const modalVideoRef = useRef(null);
 
   useEffect(() => {
     const v = videoRef.current;
@@ -38,8 +40,18 @@ export default function ProjectSlider({ media }) {
     // Force initial state
     handleVolumeChange();
 
+    const handlePlay = () => setIsPlaying(true);
+    const handlePause = () => setIsPlaying(false);
+
     v.addEventListener('volumechange', handleVolumeChange);
-    return () => v.removeEventListener('volumechange', handleVolumeChange);
+    v.addEventListener('play', handlePlay);
+    v.addEventListener('pause', handlePause);
+
+    return () => {
+      v.removeEventListener('volumechange', handleVolumeChange);
+      v.removeEventListener('play', handlePlay);
+      v.removeEventListener('pause', handlePause);
+    };
   }, [currentIndex]);
 
   // Pause video and reset play state when media changes
@@ -63,11 +75,34 @@ export default function ProjectSlider({ media }) {
     }
   };
 
+  const openModal = async () => {
+    const v = videoRef.current;
+    const mv = modalVideoRef.current;
+    // Pause main video
+    if (v && !v.paused) {
+      try { v.pause(); } catch (e) {}
+    }
+    setIsModalOpen(true);
+    // allow modal to render then play modal video
+    await new Promise((r) => setTimeout(r, 50));
+    if (mv) {
+      try { mv.currentTime = 0; mv.play(); setIsPlaying(true); } catch (e) {}
+    }
+  };
+
+  const closeModal = () => {
+    const mv = modalVideoRef.current;
+    if (mv) try { mv.pause(); } catch (e) {}
+    setIsModalOpen(false);
+    // keep main slider paused; user can play if desired
+    setIsPlaying(false);
+  };
+
   return (
     <div className="project-slider">
       <div className="slider-media-container">
         {currentMedia.type === 'video' ? (
-          <>
+          <div className={`video-wrapper ${isPlaying ? 'playing' : ''}`}>
             <video
               ref={videoRef}
               className="slider-media"
@@ -87,7 +122,46 @@ export default function ProjectSlider({ media }) {
             >
               {isPlaying ? <Pause size={20} /> : <Play size={20} />}
             </button>
-          </>
+
+            <button
+              className="video-popup-btn"
+              onClick={openModal}
+              aria-label="Open video popup"
+              title="Open"
+            >
+              View
+            </button>
+
+            {isModalOpen && (
+              <div className="video-modal" role="dialog" aria-modal="true">
+                <div className="video-modal-content">
+                  <button className="video-modal-close" onClick={closeModal} aria-label="Close video">✕</button>
+                  <video
+                    ref={modalVideoRef}
+                    className="modal-video"
+                    muted
+                    preload="auto"
+                    controls={false}
+                  >
+                    <source src={mediaPath} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+
+                  <button
+                    className="video-overlay-btn modal"
+                    onClick={() => {
+                      const mv = modalVideoRef.current;
+                      if (!mv) return;
+                      if (mv.paused) { mv.play().catch(()=>{}); setIsPlaying(true); }
+                      else { mv.pause(); setIsPlaying(false); }
+                    }}
+                  >
+                    {isPlaying ? <Pause size={20} /> : <Play size={20} />}
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
         ) : (
           <img
             className="slider-media"

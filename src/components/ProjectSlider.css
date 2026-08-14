@@ -75,6 +75,84 @@ video::-webkit-media-controls-enclosure {
   display: none !important;
 }
 
+/* Wrapper when video playing: hide overlay unless hovered */
+.video-wrapper.playing .video-overlay-btn {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.video-wrapper.playing:hover .video-overlay-btn {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.video-popup-btn {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 12;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background: rgba(0,242,254,0.12);
+  color: var(--primary);
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+}
+
+/* Modal styles */
+.video-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.7);
+  z-index: 2000;
+}
+
+.video-modal-content {
+  position: relative;
+  width: min(1100px, 95%);
+  max-height: 90vh;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-video {
+  width: 100%;
+  height: auto;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.video-modal-close {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  z-index: 2010;
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* modal overlay button centers similarly but slightly larger */
+.video-overlay-btn.modal {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+}
+
 /* Navigation Buttons */
 .slider-btn {
   position: absolute;
