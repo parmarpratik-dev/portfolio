@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
 import './ProjectSlider.css';
 
@@ -24,6 +25,7 @@ export default function ProjectSlider({ media }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const modalVideoRef = useRef(null);
+  const [modalContainer, setModalContainer] = useState(null);
 
   useEffect(() => {
     const v = videoRef.current;
@@ -53,6 +55,17 @@ export default function ProjectSlider({ media }) {
       v.removeEventListener('pause', handlePause);
     };
   }, [currentIndex]);
+
+  // create a DOM node for the portal modal
+  useEffect(() => {
+    const el = document.createElement('div');
+    el.className = 'project-slider-portal';
+    document.body.appendChild(el);
+    setModalContainer(el);
+    return () => {
+      try { document.body.removeChild(el); } catch (e) {}
+    };
+  }, []);
 
   // Pause video and reset play state when media changes
   useEffect(() => {
@@ -98,6 +111,15 @@ export default function ProjectSlider({ media }) {
     setIsPlaying(false);
   };
 
+  // Close modal on ESC
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === 'Escape' && isModalOpen) closeModal();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [isModalOpen]);
+
   return (
     <div className="project-slider">
       <div className="slider-media-container">
@@ -132,8 +154,8 @@ export default function ProjectSlider({ media }) {
               View
             </button>
 
-            {isModalOpen && (
-              <div className="video-modal" role="dialog" aria-modal="true">
+            {isModalOpen && modalContainer && createPortal(
+              <div className="video-modal" role="dialog" aria-modal="true" onClick={(e) => { if (e.target.classList && e.target.classList.contains('video-modal')) closeModal(); }}>
                 <div className="video-modal-content">
                   <button className="video-modal-close" onClick={closeModal} aria-label="Close video">✕</button>
                   <video
@@ -159,7 +181,8 @@ export default function ProjectSlider({ media }) {
                     {isPlaying ? <Pause size={20} /> : <Play size={20} />}
                   </button>
                 </div>
-              </div>
+              </div>,
+              modalContainer
             )}
           </div>
         ) : (

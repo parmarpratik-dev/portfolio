@@ -3,9 +3,9 @@
 export const portfolioData = {
   personalInfo: {
     name: "Pratik Parmar",
-    title: "Java & Backend Developer",
-    subtitle: "Transitioning from Shopify development to Java backend engineering with 2.5+ years of professional development experience.",
-    bio: "Hi! I'm Pratik Parmar, a software developer transitioning my professional career into Java backend development. With over 2.5 years of industry experience as a Shopify Developer, I have worked on building and customizing e-commerce solutions, integrating third-party services, and developing custom features. I am now focused on Java, Spring Boot, PostgreSQL, Hibernate/JPA, REST APIs, OOP, JWT authentication, WebSocket, and backend application development. I have built full-stack projects including real-time chat applications, admin dashboards, authentication systems with Google OAuth and JWT, and an AI-powered email auto-reply generator inside Gmail using the Google Gemini AI model, along with integrations such as NASA and Weather APIs. I am continuously improving my backend development skills and looking for an opportunity to join a technical team where I can apply my experience, build scalable applications, and grow as a Java backend developer.",
+    title: "Java & Fullstack Developer",
+    subtitle: "Transitioning from Shopify development to Java/spring-boot + React full-stack development with 2.5+ years of professional development experience.",
+    bio: "Hi! I'm Pratik Parmar, a software developer transitioning my professional career into Java/spring-boot + React full-stack development. With over 2.5 years of industry experience as a Shopify Developer, I have worked on building and customizing e-commerce solutions, integrating third-party services, and developing custom features. I am now focused on Java, Spring Boot, PostgreSQL, Hibernate/JPA, REST APIs, OOP, JWT authentication, WebSocket, and backend application development. I have built full-stack projects including real-time chat applications, admin dashboards, authentication systems with Google OAuth and JWT, and an AI-powered email auto-reply generator inside Gmail using the Google Gemini AI model, along with integrations such as NASA and Weather APIs. I am continuously improving my backend development skills and looking for an opportunity to join a technical team where I can apply my experience, build scalable applications, and grow as a Java backend developer.",
     email: "parmarpratik1842000@gmail.com",
     phone: "+91 8780985991",
     location: "Surat, Gujarat, India",
@@ -25,6 +25,7 @@ export const portfolioData = {
       items: [
         { name: "Java", level: 80 },
         { name: "Spring Boot & REST APIs", level: 75 },
+        { name: "Hibernate", level: 72 },
         { name: "PostgreSQL", level: 78 },
         { name: "PHP (Live Project experience)", level: 70 }
       ]
@@ -36,6 +37,7 @@ export const portfolioData = {
         { name: "tailwind css", level: 90 },
         { name: "JavaScript", level: 85 },
         { name: "React.js", level: 60 }, // Mentioning (Learning) in bio/resume
+        { name: "Axios.js", level: 60 }, // Mentioning (Learning) in bio/resume
       ]
     },
     {
@@ -44,7 +46,8 @@ export const portfolioData = {
         { name: "Shopify CLI & Theme Kit", level: 90 },
         { name: "Google Tag Manager & GTM", level: 85 },
         { name: "SEMrush & Ahrefs SEO", level: 80 },
-        { name: "Git & Version Control", level: 85 }
+        { name: "Git & Version Control", level: 85 },
+        { name: "Postman", level: 85 }
       ]
     }
   ],
@@ -148,7 +151,7 @@ export const portfolioData = {
     }
   ],
   aboutMe: {
-    paragraph1: "Transitioning from Shopify development to Java backend engineering with 2.5+ years of professional development experience. Hi! I'm Pratik Parmar, a software developer transitioning my professional career into Java backend development. With over 2.5 years of industry experience as a Shopify Developer, I have worked on building and customizing e-commerce solutions, integrating third-party services, and developing custom features. I am now focused on Java, Spring Boot, PostgreSQL, REST APIs, Spring Security, JWT authentication, WebSocket, and backend application development. I have built full-stack projects including real-time chat applications, admin dashboards, authentication systems with Google OAuth and JWT, and AI-powered applications using the Google Gemini AI model, along with integrations such as NASA and Weather APIs. I am continuously improving my backend development skills and looking for an opportunity to join a technical team where I can apply my experience, build scalable applications, and grow as a Java backend developer.",
+    paragraph1: "Transitioning from Shopify development to Java backend engineering with 2.5+ years of professional development experience. Hi! I'm Pratik Parmar, a software developer transitioning my professional career into Java/spring-boot + React full-stack development. With over 2.5 years of industry experience as a Shopify Developer, I have worked on building and customizing e-commerce solutions, integrating third-party services, and developing custom features. I am now focused on Java, Spring Boot, PostgreSQL, REST APIs, Spring Security, JWT authentication, WebSocket, and backend application development. I have built full-stack projects including real-time chat applications, admin dashboards, authentication systems with Google OAuth and JWT, and AI-powered applications using the Google Gemini AI model, along with integrations such as NASA and Weather APIs. I am continuously improving my backend development skills and looking for an opportunity to join a technical team where I can apply my experience, build scalable applications, and grow as a Java/spring-boot + React full-stack developer.",
     paragraph2: "I am a continuous learner, currently pursuing my BCA online at Parul University. Outside of writing code, you can find me playing volleyball (I was a district-level champion!) or researching new tech stacks. I am eager to join a technical team where I can apply my experience, build powerful backend systems, and contribute to innovative solutions.",
     paragraph3: ""
   }

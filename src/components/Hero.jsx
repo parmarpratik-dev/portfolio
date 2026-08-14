@@ -7,7 +7,7 @@ export default function Hero() {
   const { personalInfo } = portfolioData;
   const basePath = import.meta.env.BASE_URL;
   const cvPath = basePath + 'Pratik_Parmar_CV.pdf';
-  const words = ["Software Developer", "Backend Developer"];
+  const words = ["Software Developer", "Fullstack Developer"];
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [blink, setBlink] = useState(true);
