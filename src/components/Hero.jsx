@@ -6,7 +6,7 @@ import './Hero.css';
 export default function Hero() {
   const { personalInfo } = portfolioData;
   const basePath = import.meta.env.BASE_URL;
-  const cvPath = basePath + 'Pratik_Parmar_CV.pdf';
+  const cvPath = basePath + 'Pratik_parmar_CV_Fullstack (1).pdf';
   const words = ["Software Developer", "Fullstack Developer"];
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
@@ -16,7 +16,7 @@ export default function Hero() {
   const handleDownloadCV = () => {
     const link = document.createElement('a');
     link.href = cvPath;
-    link.download = 'Parmar_pratik_cv_main.pdf';
+    link.download = 'Pratik_parmar_CV_Fullstack (1).pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

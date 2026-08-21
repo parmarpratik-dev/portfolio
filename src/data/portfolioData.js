@@ -130,7 +130,7 @@ export const portfolioData = {
   education: [
     {
       degree: "Bachelor of Computer Applications (BCA)",
-      institution: "Parul University (Online)",
+      institution: "Parul University",
       location: "Vadodara, Gujarat, India",
       duration: "2026 – Present",
       grade: "Pursuing"
